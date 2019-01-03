@@ -27,3 +27,4 @@
 /src/main/resources/static/money-tracker/dist
 /src/main/resources/static/money-tracker/node/*
 /src/main/resources/static/money-tracker/node_modules/
+.mvn
