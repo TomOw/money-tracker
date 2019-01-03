@@ -1,5 +1,32 @@
-p {
-	background-color: #383838;
+@import "../../variables";
+
+.content {
+	background-color: $dark-gray;
 	min-height: 100vh;
 	min-width: 100vw;
+
+	.nav-bar {
+		background-color: $medium-dark-gray;
+		height: 80px;
+		width: 100%;
+		padding-left: 36px;
+
+		.logo {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			height: 100%;
+
+			mat-icon {
+				width: 64px;
+				height: 64px;
+				font-size: 64px;
+			}
+
+			.logo__text {
+				font-size: 36px;
+				font-weight: 100;
+			}
+		}
+	}
 }
