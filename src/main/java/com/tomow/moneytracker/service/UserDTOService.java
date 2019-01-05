@@ -12,20 +12,20 @@ import java.util.stream.Collectors;
 @Service
 public class UserDTOService {
 
-    @Inject
-    UserRepository userRepository;
+	@Inject
+	UserRepository userRepository;
 
-    private UserDTO toDTO(User user) {
-        UserDTO dto = new UserDTO();
-        dto.id = user.getId();
-        dto.name = user.getName();
-        dto.earnings = user.getEarnings();
-        dto.balance = user.getBalance();
+	private UserDTO toDTO(User user) {
+		UserDTO dto = new UserDTO();
+		dto.id = user.getId();
+		dto.name = user.getName();
+		dto.earnings = user.getEarnings();
+		dto.balance = user.getBalance();
 
-        return dto;
-    }
+		return dto;
+	}
 
-    public List<UserDTO> getUsers() {
-        return userRepository.findAll().stream().map(this::toDTO).collect(Collectors.toList());
-    }
+	public List<UserDTO> getUsers() {
+		return userRepository.findAll().stream().map(this::toDTO).collect(Collectors.toList());
+	}
 }
