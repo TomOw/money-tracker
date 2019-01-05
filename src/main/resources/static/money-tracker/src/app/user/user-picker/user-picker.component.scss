@@ -1,3 +1,9 @@
 .user-picker {
+	display: flex;
+	flex-direction: row;
 
+	user {
+		padding-right: 16px;
+		width: 50%;
+	}
 }

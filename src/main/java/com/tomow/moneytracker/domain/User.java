@@ -17,6 +17,9 @@ public class User {
 	@Column(name = "NAME")
 	private String name;
 
+	@Column(name = "INITIALS")
+	private String initials;
+
 	@Column(name = "EARNINGS")
 	private Double earnings;
 

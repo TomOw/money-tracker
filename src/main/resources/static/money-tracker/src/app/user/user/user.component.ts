@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {User} from "../../domain/models";
 
 @Component({
-	selector: 'app-user',
+	selector: 'user',
 	templateUrl: './user.component.html',
 	styleUrls: ['./user.component.scss']
 })
