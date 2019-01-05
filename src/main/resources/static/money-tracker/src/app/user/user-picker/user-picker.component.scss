@@ -1,9 +1,34 @@
+@import "../../../variables";
+
 .user-picker {
 	display: flex;
 	flex-direction: row;
 
-	user {
-		padding-right: 16px;
+	.user {
 		width: 50%;
+		padding: 24px;
+		margin-right: 16px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 4px;
+		transition: $transition;
+		background-color: $dark-gray;
+
+		&:hover {
+			background-color: $dark-gray-hover;
+			cursor: pointer;
+		}
+
+		.user__name {
+			font-size: 48px;
+			font-weight: 100;
+			margin-bottom: 16px;
+		}
+
+		img {
+			height: 300px;
+			width: 300px;
+		}
 	}
 }

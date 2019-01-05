@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {UserService} from "../../rest/user.service";
+import {Sex, User} from "../../domain/models";
 
 @Component({
 	selector: 'user-picker',
@@ -8,13 +9,25 @@ import {UserService} from "../../rest/user.service";
 })
 export class UserPickerComponent implements OnInit {
 
+	users: User[];
+
+	sex: Sex = Sex;
+
+	@Output('onUserPicked')
+	onUserPicked = new EventEmitter<User>();
+
 	constructor(private userService: UserService) {
 	}
 
 	ngOnInit() {
 		this.userService.getAllUsers().subscribe(users => {
-			console.log(users);
+			this.users = users;
 		});
+	}
+
+	pickUser(user: User) {
+		console.log(user);
+		this.onUserPicked.emit(user);
 	}
 
 }

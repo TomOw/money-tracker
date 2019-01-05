@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<div class="page">
+	<div class="nav-bar">
+		<a class="logo" [routerLink]="['/']">
+			<mat-icon>attach_money</mat-icon>
+			<div class="logo__text">Money tracker</div>
+		</a>
+	</div>
+	<div class="page__content">
+		<router-outlet></router-outlet>
+	</div>
+</div>

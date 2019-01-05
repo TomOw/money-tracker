@@ -20,6 +20,10 @@ public class User {
 	@Column(name = "INITIALS")
 	private String initials;
 
+	@Column(name = "SEX")
+	@Enumerated(EnumType.STRING)
+	private Sex sex;
+
 	@Column(name = "EARNINGS")
 	private Double earnings;
 

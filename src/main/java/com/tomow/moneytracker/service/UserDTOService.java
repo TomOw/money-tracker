@@ -19,6 +19,7 @@ public class UserDTOService {
 		UserDTO dto = new UserDTO();
 		dto.id = user.getId();
 		dto.name = user.getName();
+		dto.sex = user.getSex();
 		dto.initials = user.getInitials();
 		dto.earnings = user.getEarnings();
 		dto.balance = user.getBalance();

@@ -1,4 +1,11 @@
 <div class="user-picker">
-	<user></user>
-	<user></user>
+	<ng-container *ngFor="let user of users">
+		<div class="user mat-elevation-z2" (click)="pickUser(user)">
+			<div class="user__name">
+				{{user.id}}
+			</div>
+			<img *ngIf="user.sex == sex.MALE" src="../../../assets/boy-broad-smile.svg"/>
+			<img *ngIf="user.sex == sex.FEMALE" src="../../../assets/smiling-girl.svg"/>
+		</div>
+	</ng-container>
 </div>

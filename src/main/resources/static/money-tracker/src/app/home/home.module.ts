@@ -4,9 +4,10 @@ import {MoneyTrackerMaterialModule} from "../money-tracker-material.module";
 import {RouterModule, Routes} from "@angular/router";
 import {RestModule} from "../rest/rest.module";
 import {UserModule} from "../user/user.module";
+import {CommonModule} from "@angular/common";
 
 const routes: Routes = [
-	{path: '', component: HomeComponent}
+	{path: '', component: HomeComponent},
 ];
 
 @NgModule({
@@ -14,7 +15,8 @@ const routes: Routes = [
 		MoneyTrackerMaterialModule,
 		RouterModule.forChild(routes),
 		RestModule,
-		UserModule
+		UserModule,
+		CommonModule
 	],
 	exports: [],
 	declarations: [

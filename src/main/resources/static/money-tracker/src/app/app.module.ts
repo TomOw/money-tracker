@@ -8,6 +8,7 @@ import {MessageService} from "./service/message.service";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {MtHttpInterceptor} from "./service/http-interceptor";
 import {MoneyTrackerMaterialModule} from "./money-tracker-material.module";
+import {CommonModule, HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
 	declarations: [
@@ -18,11 +19,12 @@ import {MoneyTrackerMaterialModule} from "./money-tracker-material.module";
 		BrowserAnimationsModule,
 		AppRoutingModule,
 		MoneyTrackerMaterialModule,
-		HttpClientModule
+		HttpClientModule,
 	],
 	providers: [
 		MessageService,
-		{provide: HTTP_INTERCEPTORS, useClass: MtHttpInterceptor, multi: true}
+		{provide: HTTP_INTERCEPTORS, useClass: MtHttpInterceptor, multi: true},
+		{provide: LocationStrategy, useClass: HashLocationStrategy}
 	],
 	bootstrap: [AppComponent]
 })
