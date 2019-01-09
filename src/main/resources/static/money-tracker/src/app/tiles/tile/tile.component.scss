@@ -1,0 +1,8 @@
+@import "../../../variables";
+
+.tile {
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+	margin: 16px;
+}

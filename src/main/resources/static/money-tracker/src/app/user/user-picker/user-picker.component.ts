@@ -11,7 +11,7 @@ export class UserPickerComponent implements OnInit {
 
 	users: User[];
 
-	sex: Sex = Sex;
+	sex = Sex;
 
 	@Output('onUserPicked')
 	onUserPicked = new EventEmitter<User>();

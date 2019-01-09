@@ -4,6 +4,7 @@ import {DashboardComponent} from './dashboard.component';
 import {RouterModule, Routes} from "@angular/router";
 import {MoneyTrackerMaterialModule} from "../money-tracker-material.module";
 import {RestModule} from "../rest/rest.module";
+import {TilesModule} from "../tiles/tiles.module";
 
 const routes: Routes = [
 	{path: ':id', component: DashboardComponent}
@@ -17,7 +18,8 @@ const routes: Routes = [
 		CommonModule,
 		MoneyTrackerMaterialModule,
 		RouterModule.forChild(routes),
-		RestModule
+		RestModule,
+		TilesModule
 	]
 })
 export class DashboardModule {

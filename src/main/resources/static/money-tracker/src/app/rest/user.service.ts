@@ -13,7 +13,8 @@ export class UserService {
 		return this.http.get<User[]>('/api/user/all');
 	}
 
-	getAllUsersError(): Observable<User> {
-		return this.http.get<User>('/api/userhjkjhgf/all');
+	getUserById(id: number): Observable<User> {
+		return this.http.get<User>(`/api/user/byId/${id}`);
 	}
+
 }
