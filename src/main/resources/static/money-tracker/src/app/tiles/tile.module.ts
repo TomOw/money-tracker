@@ -23,5 +23,5 @@ const declarations = [
 	],
 	exports: declarations
 })
-export class TilesModule {
+export class TileModule {
 }

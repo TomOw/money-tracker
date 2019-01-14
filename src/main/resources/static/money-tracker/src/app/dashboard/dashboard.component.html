@@ -1,8 +1,12 @@
 <div class="page">
 	apsdign aoisdngoaisndgo iasn
 	{{user | json}}
-	<tile style="width: 400px">
-		<tile-header>Balance</tile-header>
+	<tile style="width: 400px" class="custom-tile">
+		<tile-header
+				(onOptionsButtonClicked)="testFunction()"
+				[optionsButton]="true">
+			Balance
+		</tile-header>
 		<tile-content>
 			<div style="display: flex; flex-direction: row">
 				$135.14

@@ -25,4 +25,8 @@ export class DashboardComponent implements OnInit {
 		})
 	}
 
+	testFunction() {
+		console.log('clicked options');
+	}
+
 }

@@ -1,9 +1,17 @@
-$white-font: #eeeeee;
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$white: #eeeeee;
 $light-gray-font: #d7d7d7;
 $medium-gray-font: #afafaf;
 $white-font-hover: #c7c7c7;
-$red-font: #d32f2f;
-$orange-font: #f57c00;
+$red: #d32f2f;
+$orange: #f57c00;
+$teal: #4db6ac;
+
+$red-accent: #ff1744;
+$green-accent: #64dd17;
 
 $gray: #9b9b9b;
 $dark-gray: #3F3F3F;

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
 	selector: 'tile-header',
@@ -7,10 +7,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TileHeaderComponent implements OnInit {
 
+	@Input()
+	optionsButton: boolean = false;
+
+	@Output()
+	onOptionsButtonClicked = new EventEmitter();
+
 	constructor() {
 	}
 
 	ngOnInit() {
+	}
+
+	optionsButtonClick() {
+		this.onOptionsButtonClicked.emit();
 	}
 
 }
